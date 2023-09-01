@@ -7,21 +7,29 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body {
+  background-color: rgb(207, 216, 224);
+  padding-bottom: 30px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.black_btn {
+  @apply rounded-full border  bg-green-700 py-3 px-8 text-white transition-all hover:bg-white hover:text-black text-center text-lg font-bold flex items-center justify-center;
+}
+
+.signup_btn {
+  @apply rounded-full border  bg-slate-600 py-3 px-8 text-white transition-all hover:bg-white hover:text-black text-center text-lg font-bold flex items-center justify-center;
+}
+
+
+
+.form_div {
+  @apply p-3 flex flex-col justify-start items-start gap-2 mb-2
+}
+
+.form_label {
+  @apply font-bold text-lg text-gray-600
+}
+
+.form_input {
+  @apply rounded mb-2 font-bold text-white p-5 bg-gray-800
 }
